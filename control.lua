@@ -2,6 +2,14 @@ require "util"
 
 local debug = false
 
+script.on_init(function()
+  for i,force in pairs(game.forces) do
+    if force.technologies["exoskeleton-equipment"].researched == true then
+      force.recipes["grabber-equipment"].enabled = true
+    end
+  end
+end)
+
 script.on_event(defines.events.on_player_placed_equipment, function(event)
   local player = game.players[event.player_index]
   if debug then player.print(event.equipment.name) end
@@ -9,11 +17,12 @@ script.on_event(defines.events.on_player_placed_equipment, function(event)
     then
       player.character_reach_distance_bonus = player.character_reach_distance_bonus + 4
       player.character_build_distance_bonus = player.character_build_distance_bonus + 4
+      player.character_item_drop_distance_bonus = player.character_item_drop_distance_bonus + 4
+      player.character_resource_reach_distance_bonus = player.character_resource_reach_distance_bonus + 2
       if debug
         then
           player.print(player.name)
           player.print(player.character_reach_distance_bonus)
-          player.print(player.character_build_distance_bonus)
       end
   end
 end)
@@ -26,16 +35,19 @@ script.on_event(defines.events.on_player_removed_equipment, function(event)
         then
           player.character_reach_distance_bonus = player.character_reach_distance_bonus - 4 * event.count
           player.character_build_distance_bonus = player.character_build_distance_bonus - 4 * event.count
+          player.character_item_drop_distance_bonus = player.character_item_drop_distance_bonus - 4 * event.count
+          player.character_resource_reach_distance_bonus = player.character_resource_reach_distance_bonus - 2 * event.count
         else
           player.character_reach_distance_bonus = 0
           player.character_build_distance_bonus = 0
+          player.character_item_drop_distance_bonus = 0
+          player.character_resource_reach_distance_bonus = 0
       end
       if debug
         then
           player.print(player.name)
           player.print(event.count)
           player.print(player.character_reach_distance_bonus)
-          player.print(player.character_build_distance_bonus)
       end
   end
 end)

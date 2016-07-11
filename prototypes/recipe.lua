@@ -7,9 +7,9 @@ data:extend(
     energy_required = 10,
     ingredients =
     {
-      {"processing-unit", 10},
-      {"long-handed-inserter", 20},
-      {"steel-plate", 20},
+      {"processing-unit", 8},
+      {"long-handed-inserter", 16},
+      {"steel-plate", 16},
     },
     result = "grabber-equipment"
   }

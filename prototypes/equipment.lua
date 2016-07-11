@@ -21,7 +21,7 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-input"
     },
-    energy_consumption = "50kW",
+    energy_consumption = "1kW",
     movement_bonus = 0.0
   }
 }
