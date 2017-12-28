@@ -12,8 +12,8 @@ data:extend(
     },
     shape =
     {
-      width = 2,
-      height = 1,
+      width = 3,
+      height = 2,
       type = "full"
     },
     energy_source =
@@ -21,8 +21,9 @@ data:extend(
       type = "electric",
       usage_priority = "secondary-input"
     },
-    energy_consumption = "1kW",
-    movement_bonus = 0.0
-  }
+    energy_consumption = "25kW",
+    movement_bonus = 0.0,
+    categories = { "armor" }
+  },
 }
 )
