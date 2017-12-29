@@ -15,9 +15,9 @@ script.on_event(defines.events.on_player_placed_equipment, function(event)
   if debug then player.print(event.equipment.name) end
   if event.equipment.name == "grabber-equipment"
     then
-      player.character_reach_distance_bonus = player.character_reach_distance_bonus + 4
-      player.character_build_distance_bonus = player.character_build_distance_bonus + 4
-      player.character_item_drop_distance_bonus = player.character_item_drop_distance_bonus + 4
+      player.character_reach_distance_bonus = player.character_reach_distance_bonus + 5
+      player.character_build_distance_bonus = player.character_build_distance_bonus + 5
+      player.character_item_drop_distance_bonus = player.character_item_drop_distance_bonus + 5
       player.character_resource_reach_distance_bonus = player.character_resource_reach_distance_bonus + 2
       if debug
         then

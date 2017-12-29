@@ -8,7 +8,7 @@ data:extend(
       filename = "__ExtendoReach__/graphics/equipment/grabber-equipment.png",
       width = 64,
       height = 32,
-      priority = "medium"
+      priority = "low"
     },
     shape =
     {
