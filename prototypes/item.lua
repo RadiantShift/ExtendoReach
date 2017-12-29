@@ -8,7 +8,8 @@ data:extend(
     flags = {"goes-to-main-inventory"},
     subgroup = "equipment",
     order = "e[grab]-a[grabber-equipment]",
-    stack_size = 20
+    stack_size = 20,
+    icon_size = 32
   }
 }
 )
