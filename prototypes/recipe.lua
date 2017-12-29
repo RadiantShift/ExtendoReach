@@ -7,7 +7,7 @@ data:extend(
     energy_required = 10,
     ingredients =
     {
-      {"processing-unit", 8},
+      {"advanced-circuit", 16},
       {"long-handed-inserter", 16},
       {"steel-plate", 16},
     },
